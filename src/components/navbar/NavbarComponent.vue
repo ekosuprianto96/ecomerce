@@ -1,6 +1,6 @@
 <template>
   <nav class="py-6">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 px-40">
       <div class="flex items-center">
         <div class="logo me-8">
           <h1 class="font-bold text-2xl">TokoKu</h1>

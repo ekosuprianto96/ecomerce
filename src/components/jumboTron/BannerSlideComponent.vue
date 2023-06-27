@@ -1,7 +1,7 @@
 <template>
-  <div class="jumbotron w-full h-[400px] bg-gray-400 overflow-hidden">
+  <div class="jumbotron w-full h-[600px] px-40 bg-gray-400 overflow-hidden">
     <div class="wrapper-banner w-full h-full">
-      <div class="item-banner px-32 flex justify-start items-center w-full h-full">
+      <div class="item-banner flex justify-start items-center w-full h-full">
         <div class="text-banner min-w-[50%] h-max">
           <h1 class="font-bold text-4xl mb-4">Summer Value Pack</h1>
           <p class="font-semibold text-md mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, veniam?</p>

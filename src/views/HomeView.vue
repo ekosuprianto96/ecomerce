@@ -1,7 +1,9 @@
 <template>
-  <div class="container border overflow-hidden min-w-full min-h-max px-40">
+  <div class="min-w-full min-h-max">
     <NavbarComponent />
     <BannerSlideComponent />
+  </div>
+  <div class="container overflow-hidden min-w-full min-h-max px-40">
     <div class="grid grid-cols-2 gap-4 mt-14">
       <div class="min-h-[250px]">
         <CardDeal title="High Coziness" subTitle="Low Price" discount="UP TO 50% OF" />
@@ -42,6 +44,9 @@
       </div>
     </div>
   </div>
+  <div class="mt-14">
+    <FooterComponent />
+  </div>
 </template>
 
 <script>
@@ -54,6 +59,7 @@ import SectionTitle from "@/components/atom/SectionTitle.vue";
 import CardFull from '@/components/card/CardFull.vue';
 import TopBrands from '@/components/atom/TopBrands.vue';
 import CardFeedback from "@/components/card/CardFeedback.vue";
+import FooterComponent from '@/components/footer/FooterComponent.vue';
 // Image
 import image1 from '../assets/images/image 18.jpg'
 import image2 from '../assets/images/image 19.jpg'
@@ -75,7 +81,8 @@ export default {
     SectionTitle,
     CardFull,
     TopBrands,
-    CardFeedback
+    CardFeedback,
+    FooterComponent
   },
   data() {
     return {
