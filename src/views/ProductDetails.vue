@@ -1,0 +1,87 @@
+<template>
+  <div class="min-w-full overflow-hidden">
+    <NavbarComponent />
+  </div>
+  <div class="container px-40 min-w-full">
+    <div class="grid grid-cols-4">
+      <div class="col-span-1 border h-max">
+        <FilterGroups icon="bx bx-slider" title="Filter">
+          <Categorie/>
+        </FilterGroups>
+        <FilterGroups icon="bx bx-chevron-right" title="Price">
+          <div class="flex justify-center items-center flex-col p-4">
+            <div class="flex items-center mb-3">
+              <input type="range" v-model="rangeValues[0]" class="me-2 h-1" min="0" max="100">
+              <span class="text-sm px-3 border rounded">{{ rangeValues[0] }}</span>
+            </div>
+            <div class="flex items-center">
+              <input type="range" v-model="rangeValues[1]" class="me-2 h-1" min="0" max="100">
+              <span class="text-sm px-3 border rounded">{{ rangeValues[1] }}</span>
+            </div>
+          </div>
+        </FilterGroups>
+        <FilterGroups icon="bx bx-slider" title="Colors">
+          <div class="p-4 gap-4 flex flex-wrap">
+            <span class="w-[30px] rounded-md block h-[30px] bg-slate-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-pink-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-orange-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-red-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-blue-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-purple-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-indigo-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-sky-900"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-rose-700"></span>
+            <span class="w-[30px] rounded-md block h-[30px] bg-slate-900"></span>
+          </div>
+        </FilterGroups>
+        <FilterGroups icon="bx bx-slider" title="Dress Style">
+          <Categorie/>
+        </FilterGroups>
+      </div>
+      <div class="col-span-3 px-8 py-6">
+        <div class="flex justify-between items-center">
+          <h1>Womens Clothing</h1>
+          <div class="">
+            <router-link class="mx-2" to="/">New</router-link>
+            <router-link class="mx-2" to="/">Recomendation</router-link>
+          </div>
+        </div>
+        <div class="mt-12">
+          <CardSlider :wrap="true" :icon="true" title="none" :price="true" :action="false"/>
+          <CardSlider :wrap="true" :icon="true" class="mt-3" title="none" :price="true" :action="false"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-14">
+    <FooterComponent />
+  </div>
+</template>
+
+<script>
+import NavbarComponent from '@/components/navbar/NavbarComponent.vue';
+import FilterGroups from '@/components/filterGroups/FilterGroups.vue';
+import Categorie from '@/components/atom/Categorie.vue';
+import CardSlider from '@/components/card/CardSlider.vue';
+import FooterComponent from '@/components/footer/FooterComponent.vue';
+export default {
+  components: {
+    NavbarComponent,
+    FilterGroups,
+    Categorie,
+    CardSlider,
+    FooterComponent
+  },
+  data() {
+    return {
+      rangeValues: [0, 0] // Nilai awal untuk multi range
+    }
+  },
+  name: 'ProductDetails',
+  props: {}
+}
+</script>
+
+<style>
+
+</style>

@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="mt-14">
-      <CardSlider :wrap="false" title="New Arrival" :action="false"/>
+      <CardSlider :wrap="false" :column="4" title="New Arrival" :action="false"/>
     </div>
     <div class="mt-14">
       <SectionTitle title="Big Saving Zone" />
@@ -29,13 +29,13 @@
       <CardSlider :wrap="true"  title="Categories Men" :action="true"/>
     </div>
     <div class="mt-14">
-      <CardSlider :wrap="false" title="Categories Woman" :action="true"/>
+      <CardSlider :wrap="false" :column="4" title="Categories Woman" :action="true"/>
     </div>
     <div class="mt-14">
       <TopBrands :images="images" />
     </div>
     <div class="mt-14">
-      <CardSlider :wrap="false" :icon="true" title="Categories Woman" :price="true" :action="false"/>
+      <CardSlider :wrap="false" :column="4" :icon="true" title="Categories Woman" :price="true" :action="false"/>
     </div>
     <div class="mt-14 overflow-hidden">
       <SectionTitle title="Feedback" />

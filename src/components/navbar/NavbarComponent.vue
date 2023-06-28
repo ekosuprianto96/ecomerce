@@ -8,13 +8,13 @@
         <nav class="">
           <ul class="flex items-center">
             <li class="px-3 py-1 hover:bg-slate-400 hover:rounded-md transition-all duration-300 hover:cursor-pointer">
-              <router-link class="font-semibold text-sm" to="/home">Shop</router-link>
+              <router-link class="font-semibold text-sm" to="/">Shop</router-link>
             </li>
             <li class="px-3 py-1 hover:bg-slate-400 hover:rounded-md transition-all duration-300 hover:cursor-pointer">
-              <router-link class="font-semibold text-sm" to="/home">Mens</router-link>
+              <router-link class="font-semibold text-sm" to="/product-details">Mens</router-link>
             </li>
             <li class="px-3 py-1 hover:bg-slate-400 hover:rounded-md transition-all duration-300 hover:cursor-pointer">
-              <router-link class="font-semibold text-sm" to="/home">Womens</router-link>
+              <router-link class="font-semibold text-sm" to="/product-details">Womens</router-link>
             </li>
             <li class="px-3 py-1 hover:bg-slate-400 hover:rounded-md transition-all duration-300 hover:cursor-pointer">
               <router-link class="font-semibold text-sm" to="/home">Combos</router-link>
