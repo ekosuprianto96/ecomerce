@@ -18,13 +18,13 @@
         </div>
         <div class="w-[80%] p-3 h-full overflow-hidden">
           <FlexComponent :justify="'center'" :align="'center'" :addClass="'w-full h-full overflow-hidden'">
-            <img class="h-full" src="../assets/images/image1.jpg" alt="">
+            <img class="h-full" :src="product.image" alt="">
           </FlexComponent>
         </div>
       </FlexComponent>
       <FlexComponent :direction="'column'" :addClass="'px-4'">
         <BraedCrumb :path="[{name: 'Home', url: '/'}, {name: 'Product', url: '/product-details'}, {name: 'Test', url: '/'}]"/>
-        <h1 class="font-bold text-2xl pr-14">Seven Hoodie With Black Colored Design</h1>
+        <h1 class="font-bold text-2xl pr-14">{{ product.name }}</h1>
         <FlexComponent gap="gap-0" :addClass="'my-2'" :align="'center'">
             <StarComponent :star="4"/>
             <span class="mx-2 text-sm">4.0</span>
@@ -51,7 +51,7 @@
         </FlexComponent>
         <FlexComponent :addClass="'mt-4'">
           <ButtonComponent text="Add To Cart" :fontWeight="'light'" :rounded="'rounded-md'" :fontSize="'0.8em'" :colorText="'text-slate-50'" :customClass="'bg-indigo-700'"/>
-          <ButtonComponent text="Rp. 200.000" :styleButton="'outline'" :fontWeight="'light'" :rounded="'rounded-md'" :fontSize="'0.8em'"/>
+          <ButtonComponent :text="product.price" :styleButton="'outline'" :colorText="'text-slate-900'" :fontWeight="'light'" :rounded="'rounded-md'" :fontSize="'0.8em'"/>
         </FlexComponent>
         <FlexComponent :addClass="'py-4 w-full border-t-2'" :wrap="'wrap'">
           <span class="flex items-center min-w-1/2 text-sm">
@@ -153,31 +153,37 @@ export default {
     return {
       products: [
         {
+          id: 1,
           name: 'Baju Kaos',
           price: 'Rp. 300.000',
           image: require('../assets/images/image1.jpg')
         },
         {
+          id: 2,
           name: 'Knitted Joggers',
           price: 'Rp. 200.000',
           image: require('../assets/images/image2.jpg')
         },
         {
+          id: 3,
           name: 'Full Sleeve',
           price: 'Rp. 400.000',
           image: require('../assets/images/image3.jpg')
         },
         {
+          id: 4,
           name: 'Baju Kaos',
           price: 'Rp. 300.000',
           image: require('../assets/images/image1.jpg')
         },
         {
+          id: 5,
           name: 'Knitted Joggers',
           price: 'Rp. 200.000',
           image: require('../assets/images/image2.jpg')
         },
         {
+          id: 6,
           name: 'Full Sleeve',
           price: 'Rp. 400.000',
           image: require('../assets/images/image3.jpg')
@@ -186,13 +192,25 @@ export default {
       tabs: ['Descriptions', 'Comments', 'Feddback'],
       tab1: true,
       tab2: false,
-      tab3: false
+      tab3: false,
+      product: []
     }
   },
   mounted() {
-    document.title = 'Product Detail'
+    document.title = 'Product Detail';
+    setTimeout(() => {
+      this.getProduct();
+    }, 3000)
+    console.log(this.$route.params)
   },
   methods: {
+    getProduct() {
+      this.products.filter(prod => {
+        if(prod.id == this.$route.params.id) {
+          this.product = prod
+        }
+      });
+    },
     handleTab(index, event) {
       const tabs = document.querySelectorAll(`.tab`)
       tabs.forEach(el => {

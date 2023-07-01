@@ -6,7 +6,7 @@
         <div class="me-2" v-if="!wrap">
           <i class='bx bx-left-arrow-alt text-xl'></i>
         </div>
-        <div class="items_card w-full flex gap-4 overflow-hidden" :class="wrap ? 'flex-wrap' : ''">
+        <div v-if="products.length > 0" class="items_card w-full flex gap-4 overflow-hidden" :class="wrap ? 'flex-wrap' : ''">
           <div v-for="(product, index) in products" :key="index" class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
             <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
               <i class='bx bx-heart'></i>
@@ -20,7 +20,34 @@
               <span v-if="price" class="absolute text-xs right-0">
                 {{ product.price }}
               </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-2xl'></i></router-link>
+              <router-link v-if="action" class="absolute right-0" :to="{name: 'product-details', params: { id: product.id }}"><i class='bx bx-right-arrow-alt text-2xl'></i></router-link>
+            </div>
+          </div>
+        </div>
+        <div v-else class="items_card w-full flex gap-4 overflow-hidden" :class="wrap ? 'flex-wrap' : ''">
+          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+            <div class="h-[230px] mb-4 bg-slate-200 animate-pulse rounded-md overflow-hidden flex justify-center items-center">
+              
+            </div>
+          </div>
+          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+            <div class="h-[230px] mb-4 bg-slate-200 animate-pulse rounded-md overflow-hidden flex justify-center items-center">
+              
+            </div>
+          </div>
+          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+            <div class="h-[230px] mb-4 bg-slate-200 animate-pulse rounded-md overflow-hidden flex justify-center items-center">
+              
+            </div>
+          </div>
+          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+            <div class="h-[230px] mb-4 bg-slate-200 animate-pulse rounded-md overflow-hidden flex justify-center items-center">
+              
+            </div>
+          </div>
+          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+            <div class="h-[230px] mb-4 bg-slate-200 animate-pulse rounded-md overflow-hidden flex justify-center items-center">
+              
             </div>
           </div>
         </div>

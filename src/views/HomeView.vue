@@ -92,31 +92,37 @@ export default {
       bg: '#FFA41B',
       products: [
         {
+          id: 1,
           name: 'Baju Kaos',
           price: 'Rp. 300.000',
           image: require('../assets/images/image1.jpg')
         },
         {
+          id: 2,
           name: 'Knitted Joggers',
           price: 'Rp. 200.000',
           image: require('../assets/images/image2.jpg')
         },
         {
+          id: 3,
           name: 'Full Sleeve',
           price: 'Rp. 400.000',
           image: require('../assets/images/image3.jpg')
         },
         {
+          id: 4,
           name: 'Baju Kaos',
           price: 'Rp. 300.000',
           image: require('../assets/images/image1.jpg')
         },
         {
+          id: 5,
           name: 'Knitted Joggers',
           price: 'Rp. 200.000',
           image: require('../assets/images/image2.jpg')
         },
         {
+          id: 6,
           name: 'Full Sleeve',
           price: 'Rp. 400.000',
           image: require('../assets/images/image3.jpg')

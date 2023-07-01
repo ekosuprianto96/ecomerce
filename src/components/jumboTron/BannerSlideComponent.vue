@@ -6,7 +6,7 @@
         <div class="text-banner relative z-30 min-w-[50%] max-w-[50%] h-max">
           <h1 class="font-bold text-6xl text-slate-50 mb-4">Summer Value Pack</h1>
           <p class="font-semibold text-md mb-14 text-slate-50 text-justify tracking-wide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quo nulla nemo unde ducimus harum.</p>
-          <ButtonComponent text="Shop Now" :customClass="'bg-slate-50'" fontSize="1em" fontWeight="semibold" rounded="rounded"/>
+          <ButtonComponent text="Shop Now" :customClass="'bg-slate-50'" :colorText="'text-slate-900'" fontSize="1em" fontWeight="semibold" rounded="rounded"/>
         </div>
       </FlexComponent>
     </div>

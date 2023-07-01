@@ -15,7 +15,7 @@ export default {
     },
     colorText: {
       type: String,
-      default: 'text-slate-950'
+      default: 'text-slate-50'
     },
     background: {
       type: String,
