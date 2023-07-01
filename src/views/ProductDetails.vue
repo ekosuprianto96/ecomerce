@@ -1,84 +1,219 @@
 <template>
-  <div class="min-w-full overflow-hidden">
-    <NavbarComponent />
+  <NavbarComponent />
+  <div class="container py-8 px-40 min-w-full">
+    <GridComponent :gap="'gap-4'" :addClass="'overflow-hidden'" :col="'grid-cols-2'">
+      <FlexComponent :gap="'gap-0'" :addClass="'h-[500px] bg-slate-100 overflow-hidden'">
+        <div class="w-[20%] h-full">
+          <FlexComponent :gap="'gap-0'" :addClass="'w-full h-full'" :justify="'center'" :align="'center'" :direction="'column'">
+            <FlexComponent :justify="'center'" :align="'center'" :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'">
+              <img src="../assets/images/image1.jpg" alt="">
+            </FlexComponent>
+            <FlexComponent :justify="'center'" :align="'center'" :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'">
+              <img src="../assets/images/image2.jpg" alt="">
+            </FlexComponent>
+            <FlexComponent :justify="'center'" :align="'center'" :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'">
+              <img src="../assets/images/image3.jpg" alt="">
+            </FlexComponent>
+          </FlexComponent>
+        </div>
+        <div class="w-[80%] p-3 h-full overflow-hidden">
+          <FlexComponent :justify="'center'" :align="'center'" :addClass="'w-full h-full overflow-hidden'">
+            <img class="h-full" src="../assets/images/image1.jpg" alt="">
+          </FlexComponent>
+        </div>
+      </FlexComponent>
+      <FlexComponent :direction="'column'" :addClass="'px-4'">
+        <BraedCrumb :path="[{name: 'Home', url: '/'}, {name: 'Product', url: '/product-details'}, {name: 'Test', url: '/'}]"/>
+        <h1 class="font-bold text-2xl pr-14">Seven Hoodie With Black Colored Design</h1>
+        <FlexComponent gap="gap-0" :addClass="'my-2'" :align="'center'">
+            <StarComponent :star="4"/>
+            <span class="mx-2 text-sm">4.0</span>
+            <i class='bx bx-comment-detail'></i>
+            <span class="ms-2 text-sm">120 comment</span>
+        </FlexComponent>
+        <FlexComponent :align="'center'">
+          <span class="font-bold text-sm">Select Size</span>
+          <span class="text-slate-400 text-sm">Size Guide</span>
+          <i class='bx bx-right-arrow-alt text-xl'></i>
+        </FlexComponent>
+        <FlexComponent :align="'center'">
+          <span class="text-slate-400 text-sm uppercase rounded-md py-1 px-2 border">xl</span>
+          <span class="text-slate-400 text-sm uppercase rounded-md py-1 px-2 border">m</span>
+          <span class="text-slate-400 text-sm uppercase rounded-md py-1 px-2 border">s</span>
+        </FlexComponent>
+        <FlexComponent :align="'start'" :direction="'column'">
+          <span class="font-bold text-sm">Colors Available</span>
+          <FlexComponent>
+            <span class="text-slate-400 text-sm uppercase rounded-full w-[20px] h-[20px]" style="background-color: blue;"></span>
+            <span class="text-slate-400 text-sm uppercase rounded-full w-[20px] h-[20px]" style="background-color: black;"></span>
+            <span class="text-slate-400 text-sm uppercase rounded-full w-[20px] h-[20px]" style="background-color: red;"></span>
+          </FlexComponent>
+        </FlexComponent>
+        <FlexComponent :addClass="'mt-4'">
+          <ButtonComponent text="Add To Cart" :fontWeight="'light'" :rounded="'rounded-md'" :fontSize="'0.8em'" :colorText="'text-slate-50'" :customClass="'bg-indigo-700'"/>
+          <ButtonComponent text="Rp. 200.000" :styleButton="'outline'" :fontWeight="'light'" :rounded="'rounded-md'" :fontSize="'0.8em'"/>
+        </FlexComponent>
+        <FlexComponent :addClass="'py-4 w-full border-t-2'" :wrap="'wrap'">
+          <span class="flex items-center min-w-1/2 text-sm">
+            <i class='bx bx-credit-card-front me-2' ></i>
+            Secure Payment
+          </span>
+          <span class="flex items-center min-w-1/2 text-sm">
+            <i class='bx bxs-t-shirt me-2'></i>
+            Size & Fit
+          </span>
+          <span class="flex items-center min-w-1/2 text-sm">
+            <i class='bx bxs-truck me-2'></i>
+            Free Shipping
+          </span>
+          <span class="flex items-center min-w-1/2 text-sm">
+            <i class='bx bx-sync me-2'></i>
+            Free Shipping & Returns
+          </span>
+        </FlexComponent>
+      </FlexComponent>
+    </GridComponent>
   </div>
-  <div class="container px-40 min-w-full">
-    <div class="grid grid-cols-4">
-      <div class="col-span-1 border h-max">
-        <FilterGroups icon="bx bx-slider" title="Filter">
-          <Categorie/>
-        </FilterGroups>
-        <FilterGroups icon="bx bx-chevron-right" title="Price">
-          <div class="flex justify-center items-center flex-col p-4">
-            <div class="flex items-center mb-3">
-              <input type="range" v-model="rangeValues[0]" class="me-2 h-1" min="0" max="100">
-              <span class="text-sm px-3 border rounded">{{ rangeValues[0] }}</span>
-            </div>
-            <div class="flex items-center">
-              <input type="range" v-model="rangeValues[1]" class="me-2 h-1" min="0" max="100">
-              <span class="text-sm px-3 border rounded">{{ rangeValues[1] }}</span>
-            </div>
-          </div>
-        </FilterGroups>
-        <FilterGroups icon="bx bx-slider" title="Colors">
-          <div class="p-4 gap-4 flex flex-wrap">
-            <span class="w-[30px] rounded-md block h-[30px] bg-slate-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-pink-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-orange-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-red-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-blue-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-purple-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-indigo-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-sky-900"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-rose-700"></span>
-            <span class="w-[30px] rounded-md block h-[30px] bg-slate-900"></span>
-          </div>
-        </FilterGroups>
-        <FilterGroups icon="bx bx-slider" title="Dress Style">
-          <Categorie/>
-        </FilterGroups>
-      </div>
-      <div class="col-span-3 px-8 py-6">
-        <div class="flex justify-between items-center">
-          <h1>Womens Clothing</h1>
-          <div class="">
-            <router-link class="mx-2" to="/">New</router-link>
-            <router-link class="mx-2" to="/">Recomendation</router-link>
-          </div>
+  <div class="mt-14 px-40">
+    <SectionTitle :title="'Product Descriptions'"/>
+    <GridComponent :col="'grid-cols-2'">
+      <div>
+        <ul class="flex">
+          <li v-for="(tab, index) in tabs" :key="index" :class="[index == 0 ? 'pl-0 border-b-2' : '', `tab`]" class="py-2 px-3 border-slate-500" @click="handleTab(index, $event)">{{ tab }}</li>
+        </ul>
+        <div v-if="tab1" class="py-4">
+          <p class="text-sm text-justify">100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with no pilling & no fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.</p>
+          <table class="mt-4 border">
+            <tr class=" bg-slate-400 border-slate-500 border">
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+            </tr>
+            <tr class=" bg-slate-400 border-slate-500 border">
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+            </tr>
+            <tr class=" bg-slate-400 border-slate-500 border">
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+              <td class="p-4 text-sm border-slate-500 border"><strong class="block">Fabric</strong> Bio-washen cottom</td>
+            </tr>
+          </table>
         </div>
-        <div class="mt-12">
-          <CardSlider :wrap="true" :icon="true" title="none" :price="true" :action="false"/>
-          <CardSlider :wrap="true" :icon="true" class="mt-3" title="none" :price="true" :action="false"/>
+        <div v-if="tab2">
+          Tab 2
+        </div>
+        <div v-if="tab3">
+          Tab 3
         </div>
       </div>
-    </div>
+      <FlexComponent :addClass="'p-4'" :justify="'center'" :align="'center'">
+        <div class="w-[350px] h-[200px] rounded-md bg-slate-500">
+
+        </div>
+      </FlexComponent>
+    </GridComponent>
+  </div>
+  <div class="px-40 mt-8">
+    <CardSlider :products="products" :wrap="true" :title="'Similar Product'" :icon="true"/>
   </div>
   <div class="mt-14">
-    <FooterComponent />
+    <FooterComponent/>
   </div>
 </template>
 
 <script>
 import NavbarComponent from '@/components/navbar/NavbarComponent.vue';
-import FilterGroups from '@/components/filterGroups/FilterGroups.vue';
-import Categorie from '@/components/atom/Categorie.vue';
-import CardSlider from '@/components/card/CardSlider.vue';
 import FooterComponent from '@/components/footer/FooterComponent.vue';
+import GridComponent from '@/components/atom/GridComponent.vue';
+import FlexComponent from '@/components/atom/FlexComponent.vue';
+import BraedCrumb from '@/components/atom/BraedCrumb.vue';
+import StarComponent from '@/components/atom/StarComponent.vue';
+import ButtonComponent from '@/components/atom/ButtonComponent.vue';
+import SectionTitle from '@/components/atom/SectionTitle.vue';
+import CardSlider from '@/components/card/CardSlider.vue';
+import TabsComponent from '@/components/atom/TabsComponent.vue';
+
 export default {
+  name: 'ProductDetails',
   components: {
-    NavbarComponent,
-    FilterGroups,
-    Categorie,
+    FooterComponent,
+    GridComponent,
+    FlexComponent,
+    BraedCrumb,
+    StarComponent,
+    ButtonComponent,
+    SectionTitle,
     CardSlider,
-    FooterComponent
-  },
+    TabsComponent,
+    NavbarComponent
+},
   data() {
     return {
-      rangeValues: [0, 0] // Nilai awal untuk multi range
+      products: [
+        {
+          name: 'Baju Kaos',
+          price: 'Rp. 300.000',
+          image: require('../assets/images/image1.jpg')
+        },
+        {
+          name: 'Knitted Joggers',
+          price: 'Rp. 200.000',
+          image: require('../assets/images/image2.jpg')
+        },
+        {
+          name: 'Full Sleeve',
+          price: 'Rp. 400.000',
+          image: require('../assets/images/image3.jpg')
+        },
+        {
+          name: 'Baju Kaos',
+          price: 'Rp. 300.000',
+          image: require('../assets/images/image1.jpg')
+        },
+        {
+          name: 'Knitted Joggers',
+          price: 'Rp. 200.000',
+          image: require('../assets/images/image2.jpg')
+        },
+        {
+          name: 'Full Sleeve',
+          price: 'Rp. 400.000',
+          image: require('../assets/images/image3.jpg')
+        },
+      ],
+      tabs: ['Descriptions', 'Comments', 'Feddback'],
+      tab1: true,
+      tab2: false,
+      tab3: false
     }
   },
-  name: 'ProductDetails',
-  props: {}
+  mounted() {
+    document.title = 'Product Detail'
+  },
+  methods: {
+    handleTab(index, event) {
+      const tabs = document.querySelectorAll(`.tab`)
+      tabs.forEach(el => {
+        el.classList.remove('border-b-2')
+      })
+      event.target.classList.toggle('border-b-2')
+      if(index == 0) {
+        this.tab1 = true;
+        this.tab2 = false;
+        this.tab3 = false;
+      }else if(index == 1) {
+        this.tab1 = false;
+        this.tab2 = true;
+        this.tab3 = false;
+      }else {
+        this.tab1 = false;
+        this.tab2 = false;
+        this.tab3 = true;
+      }
+    }
+  }
 }
 </script>
 

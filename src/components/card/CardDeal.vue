@@ -1,7 +1,8 @@
 <template>
-  <div class="w-full h-full rounded-2xl overflow-hidden" :style="`background-color: ${bg};`">
-    <div class="w-full h-full px-4">
-      <div class="flex flex-col justify-center px-6 py-8 items-start h-full">
+  <div class="w-full h-full rounded-2xl overflow-hidden">
+    <div class="w-full h-full relative flex justify-start items-center px-4">
+      <img :src="image" class="absolute z-10 left-0 right-0" alt="">
+      <div class="flex flex-col justify-center relative z-20 px-6 py-8 items-start h-full">
         <span id="sub_title" class="font-bold text-sm mb-6 text-slate-50">{{ subTitle }}</span>
         <span id="title" class="font-bold text-2xl mb-6 text-slate-50">{{ title }}</span>
         <span id="title" class="font-bold text-light text-sm mb-6 text-slate-50">UPTO 50% OF</span>
@@ -39,6 +40,10 @@ export default {
     bg: {
       type: String,
       default: '#0A6EBD'
+    },
+    image: {
+      type: String,
+      default: ''
     }
   }
 }

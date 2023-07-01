@@ -1,6 +1,6 @@
 <template>
   <footer class="footer px-40 py-14 w-full bg-slate-900">
-    <div class="grid grid-cols-5 gap-4">
+    <GridComponent :col="'grid-cols-5'" :gap="'gap-4'">
       <div class="">
         <span class="text-slate-50 font-bold mb-4 block text-lg">Need Help</span>
         <ul class="">
@@ -75,8 +75,8 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="flex justify-start gap-4 items-center mt-8">
+    </GridComponent>
+    <FlexComponent :addClass="'mt-8'" :align="'center'" :gap="'gap-4'">
       <span class="border w-[30px] h-[30px] flex justify-center items-center bg-slate-50 rounded-md">
         <i class='bx bxl-facebook'></i>
       </span>
@@ -89,7 +89,7 @@
       <span class="border w-[30px] h-[30px] flex justify-center items-center bg-slate-50 rounded-md">
         <i class='bx bxl-linkedin'></i>
       </span>
-    </div>
+    </FlexComponent>
     <div class="text-center mt-8">
       <span class="text-slate-50 text-sm">&copy;Copy Right 2023 Eko Suprianto All Right Reserved</span>
     </div>
@@ -97,8 +97,14 @@
 </template>
 
 <script>
+import GridComponent from '../atom/GridComponent.vue';
+import FlexComponent from '../atom/FlexComponent.vue';
 export default {
-  name: 'FooterComponent'
+  name: 'FooterComponent',
+  components: {
+    GridComponent,
+    FlexComponent
+  }
 }
 </script>
 
