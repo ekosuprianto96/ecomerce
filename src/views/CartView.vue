@@ -1,0 +1,66 @@
+<template>
+  <NavbarComponent/>
+  <div class="container py-8 px-40 min-w-full">
+    <BraedCrumb :path="[{name: 'Home', url: '/'}, {name: 'Add To Cart', url: '/cart'}]"/>
+    <p class="w-1/2 text-sm mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit alias dolore labore architecto, amet aut qui distinctio exercitationem omnis necessitatibus!</p>
+  </div>
+  <div class="min-w-full border">
+    <TableComponent/>
+  </div>
+  <div class="py-8 bg-slate-100 px-40">
+    <GridComponent :col="'grid-cols-2'">
+      <FlexComponent :direction="'column'" :gap="'gap-0'">
+        <span class="font-bold text-md">Discount Codes</span>
+        <span class="text-xs">Enter coupon code if your have</span>
+        <div class="relative my-8 flex border rounded-md overflow-hidden items-center">
+          <input type="text" class="">
+          <button class="text-[0.6em] bg-purple-700 px-3 text-slate-50 top-0 bottom-0 absolute right-0">Add Coupon</button>
+        </div>
+        <ButtonComponent :text="'Continue Shooping'" :styleButton="'outline'" :fontSize="'0.8em'"/>
+      </FlexComponent>
+      <FlexComponent :direction="'column'" :justify="'center'" :align="'center'" :gap="'gap-0'">
+        <div class="text-end w-full">
+          <span class="text-sm block mb-2">Sub Total : Rp. 600.000</span>
+          <span class="text-sm block mb-2">Shipping : Rp. 0</span>
+          <hr class="border-2 my-3 w-full">
+          <span class="text-sm font-bold block mb-2">Grand Total : Rp. 600.000</span>
+        </div>
+        <hr>
+      </FlexComponent>
+    </GridComponent>
+  </div>
+  <div>
+    <FooterComponent/>
+  </div>
+</template>
+
+<script>
+import NavbarComponent from '@/components/navbar/NavbarComponent.vue';
+import GridComponent from '@/components/atom/GridComponent.vue';
+import FlexComponent from '@/components/atom/FlexComponent.vue';
+import BraedCrumb from '@/components/atom/BraedCrumb.vue';
+import FooterComponent from '@/components/footer/FooterComponent.vue';
+import TableComponent from '@/components/atom/TableComponent.vue';
+import ButtonComponent from '@/components/atom/ButtonComponent.vue';
+export default {
+  name: 'CartView',
+  components: {
+    NavbarComponent,
+    BraedCrumb,
+    FooterComponent,
+    TableComponent,
+    GridComponent,
+    FlexComponent,
+    ButtonComponent
+  },
+  mounted() {
+    document.title = 'Cart Product'
+  },
+}
+</script>
+
+<style>
+td, th {
+  border: 1px solid;
+}
+</style>

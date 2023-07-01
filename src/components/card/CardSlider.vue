@@ -7,94 +7,20 @@
           <i class='bx bx-left-arrow-alt text-xl'></i>
         </div>
         <div class="items_card w-full flex gap-4 overflow-hidden" :class="wrap ? 'flex-wrap' : ''">
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
+          <div v-for="(product, index) in products" :key="index" class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
             <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
               <i class='bx bx-heart'></i>
             </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
+            <div class="h-[230px] mb-4 rounded-md overflow-hidden flex justify-center items-center">
+              <img :src="product.image" class="w-full" :class="column >= 4 ? 'max-w-[180px]' : 'max-w-[220px]'" :alt="product.name">
             </div>
             <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
+              <span class="block font-bold text-xs mb-2">{{ product.name }}</span>
+              <span v-if="action || price" class="block font-[200] text-[0.7em]">Explore Now</span>
               <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
+                {{ product.price }}
               </span>
               <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-2xl'></i></router-link>
-            </div>
-          </div>
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
-            <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
-              <i class='bx bx-heart'></i>
-            </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
-            </div>
-            <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
-              <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
-              </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-xl'></i></router-link>
-            </div>
-          </div>
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
-            <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
-              <i class='bx bx-heart'></i>
-            </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
-            </div>
-            <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
-              <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
-              </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-xl'></i></router-link>
-            </div>
-          </div>
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
-            <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
-              <i class='bx bx-heart'></i>
-            </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
-            </div>
-            <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
-              <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
-              </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-xl'></i></router-link>
-            </div>
-          </div>
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
-            <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
-              <i class='bx bx-heart'></i>
-            </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
-            </div>
-            <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
-              <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
-              </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-xl'></i></router-link>
-            </div>
-          </div>
-          <div class="item_card relative min-h-[230px]" :class="column == 4 ? 'min-w-[18.6%]' : 'min-w-[31.5%]'">
-            <span v-if="icon" class="absolute rounded-full p-2 bg-slate-50 w-[25px] h-[25px] top-3 right-3 flex justify-center items-center">
-              <i class='bx bx-heart'></i>
-            </span>
-            <div class="h-[230px] mb-4 rounded-md bg-slate-600">
-            </div>
-            <div class="relative flex flex-col justify-center items-start">
-              <span class="block font-bold text-sm mb-2">Knitted Joggers</span>
-              <span v-if="action || price" class="block font-bold text-xs">Explore Now</span>
-              <span v-if="price" class="absolute text-xs right-0">
-                Rp. 20.000
-              </span>
-              <router-link v-if="action" class="absolute right-0" to="/home"><i class='bx bx-right-arrow-alt text-xl'></i></router-link>
             </div>
           </div>
         </div>
@@ -114,6 +40,10 @@ export default {
     SectionTitle
   },
   props: {
+    products: {
+      type: Array,
+      default: []
+    },
     action: {
       type: Boolean,
       default: true

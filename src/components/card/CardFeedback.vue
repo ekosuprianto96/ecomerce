@@ -5,7 +5,7 @@
         <img :src="image" alt="">
       </div>
       <div class="w-1/2 flex flex-nowrap justify-end items-start h-full">
-        <i v-for="feed in feedback" :key="feed" :class="feed.fill" class='bx bxs-star'></i>
+        <StarComponent :star="star"/>
       </div>
     </div>
     <div class="text-feedback mt-3 mb-2">
@@ -16,8 +16,12 @@
 </template>
 
 <script>
+import StarComponent from '../atom/StarComponent.vue';
 export default {
   name: 'CardFeedback',
+  components: {
+    StarComponent
+  },
   props: {
     image: {
       type: Image,
@@ -26,28 +30,9 @@ export default {
     star: {
       type: Number,
       default: 0
-    }
+    } 
   },
-  data() {
-    return {
-      feedback: []
-    }
-  },
-  mounted() {
-    this.loopStarFeedback(this.star)
-  },
-  methods: {
-    loopStarFeedback(parameter) {
-      for(let i = 1; i <= 5; i++) {
-        let fill = 'text-slate-500';
-          if(i <= parameter) {
-            fill = 'text-yellow-500'
-          }
-         const feedback = {count: i, fill: fill};
-          this.feedback.push(feedback);
-      }
-    }
-  }
+  
 }
 </script>
 

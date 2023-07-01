@@ -1,7 +1,7 @@
 <template>
   <router-link :to="link" class="px-4 py-2" 
           :style="`font-size: ${fontSize};`"
-          :class="[rounded, colorText, styleButton == 'none-outline' ? 'bg-slate-50' : 'border', customClass, `font-${fontWeight}`]"
+          :class="[rounded, colorText, styleButton == 'none-outline' ? '' : 'border', customClass, `font-${fontWeight}`]"
         >{{ text }}</router-link>
 </template>
 
