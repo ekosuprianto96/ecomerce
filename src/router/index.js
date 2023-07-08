@@ -1,20 +1,22 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import ProductList from '../views/ProductList';
-import ProductDetails from '../views/ProductDetails';
-import CartView from '../views/CartView.vue';
-import CheckoutView from '../views/CheckoutView.vue';
-import ContactDetailsView from '../views/ContactDetailsView.vue';
-import AddAddress from '../views/AddAddressView.vue';
-import WishlistView from '../views/WishlistView.vue';
-import NotFoundView from '../views/NotFoundView.vue';
+import ProductList from "../views/ProductList";
+import ProductDetails from "../views/ProductDetails";
+import CartView from "../views/CartView.vue";
+import CheckoutView from "../views/CheckoutView.vue";
+import ContactDetailsView from "../views/ContactDetailsView.vue";
+import AddAddress from "../views/AddAddressView.vue";
+import WishlistView from "../views/WishlistView.vue";
+import NotFoundView from "../views/NotFoundView.vue";
+import RegisterView from "../views/RegisterView.vue";
+import LoginView from "../views/LoginView.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     meta: {
-      title: 'Home'
+      title: "Home",
     },
     component: HomeView,
   },
@@ -22,68 +24,84 @@ const routes = [
     path: "/product-list",
     name: "product-list",
     meta: {
-      title: 'Product List'
+      title: "Product List",
     },
-    component: ProductList
+    component: ProductList,
   },
   {
-    path: '/product-details/:id',
-    name: 'product-details',
+    path: "/product-details/:id",
+    name: "product-details",
     meta: {
-      title: 'Product Details'
+      title: "Product Details",
     },
-    component: ProductDetails
+    component: ProductDetails,
   },
   {
-    path: '/cart',
-    name: 'cart',
+    path: "/cart",
+    name: "cart",
     meta: {
-      title: 'Cart'
+      title: "Cart",
     },
-    component: CartView
+    component: CartView,
   },
   {
-    path: '/checkout',
-    name: 'checkout',
+    path: "/checkout",
+    name: "checkout",
     meta: {
-      title: 'Checkout'
+      title: "Checkout",
     },
-    component: CheckoutView
+    component: CheckoutView,
   },
   {
-    path: '/contact-details',
-    name: 'contact-details',
+    path: "/contact-details",
+    name: "contact-details",
     meta: {
-      title: 'Contact Details'
+      title: "Contact Details",
     },
-    component: ContactDetailsView
+    component: ContactDetailsView,
   },
   {
-    path: '/add-address',
-    name: 'add-address',
+    path: "/add-address",
+    name: "add-address",
     meta: {
-      title: 'Add Address'
+      title: "Add Address",
     },
-    component: AddAddress
+    component: AddAddress,
   },
   {
-    path: '/wishlist',
-    name: 'wishlist',
+    path: "/wishlist",
+    name: "wishlist",
     meta: {
-      title: 'Wishlist'
+      title: "Wishlist",
     },
-    component: WishlistView
+    component: WishlistView,
   },
   {
-    path: '/:pathMatch(.*)*',
-    component: NotFoundView
-  }
+    path: "/register",
+    name: "register",
+    meta: {
+      title: "Register",
+    },
+    component: RegisterView,
+  },
+  {
+    path: "/login",
+    name: "login",
+    meta: {
+      title: "Login",
+    },
+    component: LoginView,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: NotFoundView,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   scrollBehavior() {
-    return {top: 0, left: 0}
+    return { top: 0, left: 0 };
   },
   routes,
 });
