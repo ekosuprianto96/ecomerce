@@ -1,42 +1,43 @@
 <template>
-  <div class="flex" :class="[gap, addClass]" 
-        :style="`justify-content: ${justify};align-items: ${align};flex-wrap: ${wrap};flex-direction: ${direction}`">
+  <div
+    class="flex"
+    :class="[gap, addClass]"
+    :style="`justify-content: ${justify};align-items: ${align};flex-wrap: ${wrap};flex-direction: ${direction}`"
+  >
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FlexComponent',
+  name: "FlexComponent",
   props: {
     gap: {
       type: String,
-      default: 'gap-4'
+      default: "gap-4",
     },
     justify: {
       type: String,
-      default: 'flex-start'
+      default: "flex-start",
     },
     wrap: {
       type: String,
-      default: 'nowrap'
+      default: "nowrap",
     },
     addClass: {
       type: String,
-      default: ''
+      default: "",
     },
     direction: {
       type: String,
-      default: 'row'
+      default: "row",
     },
     align: {
       type: String,
-      default: 'start'
-    }
-  }
-}
+      default: "start",
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,19 +1,20 @@
 <template>
-  <span class="block mb-8 font-bold h-auto text-md border-l-4 ps-6 border-l-slate-700">{{ title }}</span>
+  <span
+    class="block lg:mb-8 mb-4 font-bold h-auto text-md border-l-4 lg:ps-6 ps-4 border-l-slate-700"
+    >{{ title }}</span
+  >
 </template>
 
 <script>
 export default {
-  name: 'SectionTitle',
+  name: "SectionTitle",
   props: {
     title: {
       type: String,
-      default: 'Title Section'
-    }
-  }
-}
+      default: "Title Section",
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

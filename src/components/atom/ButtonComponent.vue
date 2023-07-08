@@ -1,54 +1,61 @@
 <template>
-  <router-link :to="link" class="px-4 py-2" 
-          :style="`font-size: ${fontSize};`"
-          :class="[rounded, colorText, styleButton == 'none-outline' ? '' : 'border', customClass, `font-${fontWeight}`]"
-        >{{ text }}</router-link>
+  <router-link
+    :to="link"
+    class="px-4 py-2"
+    :style="`font-size: ${fontSize};`"
+    :class="[
+      rounded,
+      colorText,
+      styleButton == 'none-outline' ? '' : 'border',
+      customClass,
+      `font-${fontWeight}`,
+    ]"
+    >{{ text }}</router-link
+  >
 </template>
 
 <script>
 export default {
-  name: 'ButtonComponent',
+  name: "ButtonComponent",
   props: {
     text: {
       type: String,
-      default: 'Button',
+      default: "Button",
     },
     colorText: {
       type: String,
-      default: 'text-slate-50'
+      default: "text-slate-50",
     },
     background: {
       type: String,
-      default: ''
+      default: "",
     },
     fontSize: {
       type: String,
-      default: '1em'
+      default: "1em",
     },
     fontWeight: {
       type: String,
-      default: 'bold'
+      default: "bold",
     },
     styleButton: {
       type: String,
-      default: 'none-outline'
+      default: "none-outline",
     },
     customClass: {
       type: String,
-      default: ''
+      default: "",
     },
     rounded: {
       type: String,
-      default: ''
+      default: "",
     },
     link: {
       type: String,
-      default: '/'
-    }
-  }
-}
+      default: "/",
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

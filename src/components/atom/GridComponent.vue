@@ -6,24 +6,22 @@
 
 <script>
 export default {
-  name: 'GridComponent',
+  name: "GridComponent",
   props: {
     col: {
       type: String,
-      default: 4
+      default: 4,
     },
     gap: {
       type: String,
-      default: 'gap-4'
+      default: "gap-4",
     },
     addClass: {
       type: String,
-      default: ''
-    }
-  }
-}
+      default: "",
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
