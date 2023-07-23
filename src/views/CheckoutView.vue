@@ -10,7 +10,7 @@
     />
     <SectionTitle class="lg:mt-8 mt-4" :title="'Checkout'" />
     <GridComponent :col="'lg:grid-cols-3'">
-      <div class="lg:col-span-2 order-2">
+      <div class="lg:col-span-2 lg:order-1 order-2">
         <span class="font-bold text-sm block">Billing Details</span>
         <GridComponent :col="'grid-cols-2'" :addClass="'mt-6'">
           <TextInput
@@ -173,7 +173,7 @@
           />
         </div>
       </div>
-      <div class="lg:col-span-1 p-4 order-1 bg-white border h-max rounded-md">
+      <div class="lg:col-span-1 p-4 lg:order-2 order-1 bg-white border h-max rounded-md">
         <span class="font-bold text-sm block">Order Summary</span>
         <FlexComponent
           :gap="'gap-0'"

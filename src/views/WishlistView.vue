@@ -1,6 +1,6 @@
 <template>
   <NavbarComponent />
-  <div class="container min-w-full px-40 py-8">
+  <div class="container min-w-full lg:px-40 lg:py-8 p-4">
     <BraedCrumb
       :path="[
         { name: 'Home', url: '/' },
@@ -8,20 +8,20 @@
         { name: 'Personal Info', url: '/checkout' },
       ]"
     />
-    <GridComponent :col="'grid-cols-4'">
-      <div class="col-span-1">
+    <GridComponent :col="'lg:grid-cols-4'">
+      <div class="lg:col-span-1 lg:block hidden">
         <SectionTitle class="mt-8 mb-1" :title="'Hello Eko Suprianto'" />
         <span class="block text-xs">Welcome to your account</span>
         <SideBarMenu />
       </div>
-      <div class="col-span-3">
+      <div class="lg:col-span-3">
         <span class="text-lg block font-bold mt-8">Wishlist</span>
         <div class="w-full h-max mt-6">
-          <div class="flex items-center mb-2 h-full py-3 gap-4">
+          <div class="flex flex-col lg:flex-row lg:items-center mb-2 h-full py-3 gap-4">
             <i class="bx text-xl bx-x"></i>
             <img
               src="../assets/images/image1.jpg"
-              class="h-[80px] rounded-sm"
+              class="lg:h-[80px] w-[30px] rounded-sm"
               alt=""
             />
             <div class="w-[50%] ms-3 h-[80px]">

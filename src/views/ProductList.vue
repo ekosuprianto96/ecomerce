@@ -73,7 +73,7 @@
         <div class="mt-8">
           <CardSlider
             :products="products"
-            :wrap="true"
+            :wrap="screen < 548 ? false : true"
             :column="3"
             :icon="true"
             title="none"
@@ -82,7 +82,7 @@
           />
           <CardSlider
             :products="products"
-            :wrap="true"
+            :wrap="screen < 548 ? false : true"
             :icon="true"
             :column="3"
             class="mt-3"
@@ -152,8 +152,15 @@ export default {
   },
   name: "ProductDetails",
   props: {},
+  computed: {
+    screen() {
+      return this.$store.state.screenSize;
+    }
+  },
   mounted() {
     document.title = "Product List";
+    const screen = window.innerWidth;
+    this.$store.commit('setScreenSize', screen);
   },
 };
 </script>

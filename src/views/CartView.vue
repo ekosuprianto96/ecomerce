@@ -18,7 +18,7 @@
   </div>
   <div class="lg:py-8 py-4 bg-slate-100 px-4 lg:px-40">
     <GridComponent :col="'lg:grid-cols-2 grid-cols-1'">
-      <FlexComponent :direction="'column'" :gap="'gap-0'" :addClass="'order-2'">
+      <FlexComponent :direction="'column'" :gap="'gap-0'" :addClass="'order-2 lg:order-1'">
         <span class="font-bold text-md">Discount Codes</span>
         <span class="text-xs">Enter coupon code if your have</span>
         <div
@@ -40,10 +40,10 @@
       </FlexComponent>
       <FlexComponent
         :direction="'column'"
-        :justify="'center'"
-        :align="'center'"
+        :justify="screen <= 540 ? 'center' : 'flex-start'"
+        :align="screen <= 540 ? 'center' : 'flex-start'"
         :gap="'gap-0'"
-        :addClass="'order-1'"
+        :addClass="'order-1 lg:order-2'"
       >
         <div class="lg:text-end text-start w-full">
           <span class="text-sm block mb-2">Sub Total : Rp. 600.000</span>
@@ -81,8 +81,15 @@ export default {
     FlexComponent,
     ButtonComponent,
   },
+  computed: {
+    screen() {
+      return this.$store.state.screenSize;
+    }
+  },
   mounted() {
     document.title = "Cart Product";
+    const screen = window.innerWidth;
+    this.$store.commit('setScreenSize', screen);
   },
 };
 </script>

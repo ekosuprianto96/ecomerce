@@ -58,7 +58,8 @@ export default {
     return {
       images: "",
       position: 0,
-      index: 0
+      index: 0,
+      items: null,
     };
   },
   computed: {
@@ -67,22 +68,27 @@ export default {
     }
   },
   mounted() {
+    this.items = document.querySelectorAll('.item-slider');
     const screen = window.innerWidth;
     this.$store.commit('setScreenSize', screen);
+    this.slideBanner()
   },
   methods: {
+    slideBanner() {
+      setInterval(() => this.nextSlide(), 3000)
+    },
     nextSlide(event) {
-      const items = document.querySelectorAll('.item-slider');
-      if(this.index >= (this.datas.length - 1)) {
-        this.position = 0;
-        this.index = 0;
-      }else {
-        this.position += items[this.index].offsetWidth;
-        this.index++;
+      if(this.items != null) {
+        if(this.index >= (this.datas.length - 1)) {
+          this.position = 0;
+          this.index = 0;
+        }else {
+          this.position += this.items[this.index].offsetWidth;
+          this.index++;
+        }
       }
     },
     prevSlide(event) {
-      console.log(event)
       if(this.index > 0) {
         this.position -= this.screen;
         this.index--;
