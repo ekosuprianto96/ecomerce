@@ -124,7 +124,7 @@
       </ul>
     </div>
   </div>
-  <div class="py-2 gap-3 flex flex-col w-full items-start px-4">
+  <div class="py-2 gap-3 flex lg:hidden flex-col w-full items-start px-4">
     <div class="flex w-full">
       <div class="flex justify-center items-center">
         <img
