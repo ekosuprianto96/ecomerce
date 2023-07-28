@@ -7,7 +7,7 @@
     <GridComponent col="grid-cols-2" addClass="lg:mt-8 mt-4">
       <div class="lg:min-h-[250px]">
         <CardDeal
-          :image="require(`../assets/images/image2.png`)"
+          :image="require(`@/assets/images/image2.png`)"
           title="High Coziness"
           subTitle="Low Price"
           discount="UP TO 50% OF"
@@ -134,15 +134,15 @@ import FooterComponent from "@/components/footer/FooterComponent.vue";
 import GridComponent from "@/components/atom/GridComponent.vue";
 import FlexComponent from "@/components/atom/FlexComponent.vue";
 // Image
-import image1 from "../assets/images/image 18.jpg";
-import image2 from "../assets/images/image 19.jpg";
-import image3 from "../assets/images/image 20.jpg";
-import image4 from "../assets/images/image 21.jpg";
-import feedback1 from "../assets/images/feedback1.png";
-import feedback2 from "../assets/images/feedback2.png";
-import feedback3 from "../assets/images/feedback3.png";
-import feedback4 from "../assets/images/feedback4.png";
-import feedback5 from "../assets/images/feedback5.png";
+import image1 from "@/assets/images/image 18.jpg";
+import image2 from "@/assets/images/image 19.jpg";
+import image3 from "@/assets/images/image 20.jpg";
+import image4 from "@/assets/images/image 21.jpg";
+import feedback1 from "@/assets/images/feedback1.png";
+import feedback2 from "@/assets/images/feedback2.png";
+import feedback3 from "@/assets/images/feedback3.png";
+import feedback4 from "@/assets/images/feedback4.png";
+import feedback5 from "@/assets/images/feedback5.png";
 export default {
   name: "HomeView",
   components: {

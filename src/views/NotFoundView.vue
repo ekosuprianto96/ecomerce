@@ -3,7 +3,7 @@
   <div
     class="min-w-full lg:px-40 flex justify-center text-center items-center flex-col p-4 lg:py-14"
   >
-    <img src="../assets/images/notfound404.svg" class="mb-4 lg:w-[400px] w-[200px]" alt="Not Found" />
+    <img src="@/assets/images/notfound404.svg" class="mb-4 lg:w-[400px] w-[200px]" alt="Not Found" />
     <span class="block text-3xl mb-4">Oops! Page Not Found</span>
     <span class="block text-sm lg:w-[40%] w-full"
       >The page you are looking for might have been removed ortemporarily

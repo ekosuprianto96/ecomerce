@@ -122,7 +122,7 @@ Deliveri instruction</textarea
   >
     <div class="w-full relative flex justify-center items-center">
       <img
-        src="../assets/images/order-confirmed.svg"
+        src="@/assets/images/order-confirmed.svg"
         class="w-[500px]"
         alt=""
       />

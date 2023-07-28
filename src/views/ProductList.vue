@@ -120,32 +120,32 @@ export default {
         {
           name: "Baju Kaos",
           price: "Rp. 300.000",
-          image: require("../assets/images/image1.jpg"),
+          image: require("@/assets/images/image1.jpg"),
         },
         {
           name: "Knitted Joggers",
           price: "Rp. 200.000",
-          image: require("../assets/images/image2.jpg"),
+          image: require("@/assets/images/image2.jpg"),
         },
         {
           name: "Full Sleeve",
           price: "Rp. 400.000",
-          image: require("../assets/images/image3.jpg"),
+          image: require("@/assets/images/image3.jpg"),
         },
         {
           name: "Baju Kaos",
           price: "Rp. 300.000",
-          image: require("../assets/images/image1.jpg"),
+          image: require("@/assets/images/image1.jpg"),
         },
         {
           name: "Knitted Joggers",
           price: "Rp. 200.000",
-          image: require("../assets/images/image2.jpg"),
+          image: require("@/assets/images/image2.jpg"),
         },
         {
           name: "Full Sleeve",
           price: "Rp. 400.000",
-          image: require("../assets/images/image3.jpg"),
+          image: require("@/assets/images/image3.jpg"),
         },
       ],
     };
