@@ -20,7 +20,7 @@
           <div class="flex flex-col lg:flex-row lg:items-center mb-2 h-full py-3 gap-4">
             <i class="bx text-xl bx-x"></i>
             <img
-              src="../assets/images/image1.jpg"
+              src="@/assets/images/image1.jpg"
               class="lg:h-[80px] w-[30px] rounded-sm"
               alt=""
             />
@@ -47,7 +47,7 @@
           <div class="flex items-center mb-2 h-full py-3 gap-4">
             <i class="bx text-xl bx-x"></i>
             <img
-              src="../assets/images/image2.jpg"
+              src="@/assets/images/image2.jpg"
               class="h-[80px] rounded-sm"
               alt=""
             />
@@ -74,7 +74,7 @@
           <div class="flex items-center mb-2 h-full py-3 gap-4">
             <i class="bx text-xl bx-x"></i>
             <img
-              src="../assets/images/image3.jpg"
+              src="@/assets/images/image3.jpg"
               class="h-[80px] rounded-sm"
               alt=""
             />

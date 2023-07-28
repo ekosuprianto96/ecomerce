@@ -23,21 +23,21 @@
               :align="'center'"
               :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'"
             >
-              <img src="../assets/images/image1.jpg" alt="" />
+              <img src="@/assets/images/image1.jpg" alt="" />
             </FlexComponent>
             <FlexComponent
               :justify="'center'"
               :align="'center'"
               :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'"
             >
-              <img src="../assets/images/image2.jpg" alt="" />
+              <img src="@/assets/images/image2.jpg" alt="" />
             </FlexComponent>
             <FlexComponent
               :justify="'center'"
               :align="'center'"
               :addClass="'w-[50px] h-[50px] mb-2 border overflow-hidden rounded-lg'"
             >
-              <img src="../assets/images/image3.jpg" alt="" />
+              <img src="@/assets/images/image3.jpg" alt="" />
             </FlexComponent>
           </FlexComponent>
         </div>
@@ -254,37 +254,37 @@ export default {
           id: 1,
           name: "Baju Kaos",
           price: "Rp. 300.000",
-          image: require("../assets/images/image1.jpg"),
+          image: require("@/assets/images/image1.jpg"),
         },
         {
           id: 2,
           name: "Knitted Joggers",
           price: "Rp. 200.000",
-          image: require("../assets/images/image2.jpg"),
+          image: require("@/assets/images/image2.jpg"),
         },
         {
           id: 3,
           name: "Full Sleeve",
           price: "Rp. 400.000",
-          image: require("../assets/images/image3.jpg"),
+          image: require("@/assets/images/image3.jpg"),
         },
         {
           id: 4,
           name: "Baju Kaos",
           price: "Rp. 300.000",
-          image: require("../assets/images/image1.jpg"),
+          image: require("@/assets/images/image1.jpg"),
         },
         {
           id: 5,
           name: "Knitted Joggers",
           price: "Rp. 200.000",
-          image: require("../assets/images/image2.jpg"),
+          image: require("@/assets/images/image2.jpg"),
         },
         {
           id: 6,
           name: "Full Sleeve",
           price: "Rp. 400.000",
-          image: require("../assets/images/image3.jpg"),
+          image: require("@/assets/images/image3.jpg"),
         },
       ],
       tabs: ["Descriptions", "Comments", "Feddback"],

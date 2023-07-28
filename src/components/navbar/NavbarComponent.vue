@@ -65,13 +65,13 @@
           :justify="'flex-end'"
           :align="'center'"
         >
-          <router-link class="px-2 py-1 bg-slate-400 rounded" to="/home"
+          <router-link class="px-2 py-1 bg-slate-400 rounded" to="/wishlist"
             ><i class="bx bx-heart"></i
           ></router-link>
-          <router-link class="px-2 py-1 bg-slate-400 rounded" to="/home"
+          <router-link class="px-2 py-1 bg-slate-400 rounded" to="/contact-details"
             ><i class="bx bx-user"></i
           ></router-link>
-          <router-link class="px-2 py-1 me-0 bg-slate-400 rounded" to="/home"
+          <router-link class="px-2 py-1 me-0 bg-slate-400 rounded" to="/cart"
             ><i class="bx bx-cart-alt"></i
           ></router-link>
         </FlexComponent>

@@ -187,7 +187,7 @@
             :align="'center'"
           >
             <img
-              src="../assets/images/image1.jpg"
+              src="@/assets/images/image1.jpg"
               class="h-[70px] rounded-md"
               alt=""
             />
@@ -208,7 +208,7 @@
             :align="'center'"
           >
             <img
-              src="../assets/images/image2.jpg"
+              src="@/assets/images/image2.jpg"
               class="h-[70px] rounded-md"
               alt=""
             />
@@ -229,7 +229,7 @@
             :align="'center'"
           >
             <img
-              src="../assets/images/image3.jpg"
+              src="@/assets/images/image3.jpg"
               class="h-[70px] rounded-md"
               alt=""
             />

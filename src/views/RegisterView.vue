@@ -3,17 +3,17 @@
   <div class="lg:px-40 px-4 min-w-full lg:min-h-max min-h-[90vh] flex justify-center items-center overflow-hidden">
     <GridComponent :col="'lg:grid-cols-2'" :gap="'gap-0'">
       <div class="w-full lg:flex hidden justify-center items-center h-[600px] overflow-hidden">
-        <img class="min-w-full" src="../assets/images/bg-register.jpg" alt="">
+        <img class="min-w-full" src="@/assets/images/bg-register.jpg" alt="">
       </div>
       <div class="flex flex-col justify-evenly p-6 border shadow-md lg:border-none lg:shadow-none rounded-md lg:rounded-none bg-white w-full">
         <h1 class="font-bold lg:text-start mb-3 lg:mb-0 text-center text-2xl">Sign Up</h1>
         <span class="text-xs">Sign up for free to access to in any of our products</span>
         <div class="mt-6">
           <router-link class="border w-full text-center flex justify-center items-center text-sm py-2 rounded-md mb-3" to="/">
-            <img src="../assets/images/Google.png" class="w-[17px] me-2" alt="">  Continue With Google
+            <img src="@/assets/images/Google.png" class="w-[17px] me-2" alt="">  Continue With Google
           </router-link>
           <router-link class="border w-full text-center flex justify-center items-center text-sm py-2 rounded-md" to="/">
-            <img src="../assets/images/twitter.png" class="w-[17px] me-2" alt="">  Continue With Twitter
+            <img src="@/assets/images/twitter.png" class="w-[17px] me-2" alt="">  Continue With Twitter
           </router-link>
         </div>
         <div class="mt-6">
