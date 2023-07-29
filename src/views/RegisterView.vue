@@ -48,7 +48,7 @@ import NavbarComponent from "@/components/navbar/NavbarComponent.vue";
 import FooterComponent from "@/components/footer/FooterComponent.vue";
 import GridComponent from "@/components/atom/GridComponent.vue";
 import FlexComponent from "@/components/atom/FlexComponent.vue";
-import BraedCrumb from "@/components/atom/BraedCrumb.vue";
+import BraedCrumb from "@/components/atom/BreadCrumb.vue";
 import StarComponent from "@/components/atom/StarComponent.vue";
 import ButtonComponent from "@/components/atom/ButtonComponent.vue";
 import SectionTitle from "@/components/atom/SectionTitle.vue";
