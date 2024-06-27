@@ -285,7 +285,7 @@ import ButtonComponent from "@/components/atom/ButtonComponent.vue";
 import GridComponent from "@/components/atom/GridComponent.vue";
 import FlexComponent from "@/components/atom/FlexComponent.vue";
 import SectionTitle from "@/components/atom/SectionTitle.vue";
-import BraedCrumb from "@/components/atom/BraedCrumb.vue";
+import BraedCrumb from "@/components/atom/BreadCrumb.vue";
 import TextInput from "@/components/atom/TextInput.vue";
 
 export default {
